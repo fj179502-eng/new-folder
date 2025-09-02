@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>General Form</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icheck-bootstrap/3.0.1/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daterangepicker/3.1/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css">
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #F5F5F5;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    .navbar-custom {
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    }
+    .card {
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,.1);
+    }
+    .form-control:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+    @media (max-width: 767.98px) {
+      .navbar-nav .dropdown-menu {
+        position: static;
+        float: none;
+      }
+      .card-body .row {
+        margin-bottom: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-white navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-lg-none" href="#">Menu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-home mr-1"></i> Home</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" 
+               data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-address-book mr-1"></i> Contact
+            </a>
+            <div class="dropdown-menu" aria-labelledby="contactDropdown">
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Contact us</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Feedback</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" 
+               data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-info-circle mr-1"></i> About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Principle Message</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Vision Mission</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">History</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Picture Gallery</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="formDropdown" role="button" 
+               data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-wpforms mr-1"></i> Form
+            </a>
+            <div class="dropdown-menu" aria-labelledby="formDropdown">
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">General</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Advance</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Validation</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="extrasDropdown" role="button" 
+               data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cubes mr-1"></i> Extras
+            </a>
+            <div class="dropdown-menu" aria-labelledby="extrasDropdown">
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Login</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Registration</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Lock Screen</h3>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <div class="media">
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">Forget Password</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-table mr-1"></i> Table</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-envelope mr-1"></i> Message</a>
+          </li>
+        </ul>
+        
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container py-4">
+    <div class="row">
+      <!-- First Column -->
+      <div class="col-lg-6">
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Forms</h3>
+          </div>
+          <div class="card-body">
+            <form method="post">
+              <div class="form-group">
+                <label>User Name</label>
+                <input type="email" name="email1" class="form-control" placeholder="Enter...">
+              </div>
+
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="pass" class="form-control" placeholder="Enter...">
+              </div>
+
+              <div class="form-group">
+                <label>File Upload</label>
+                <input type="file" name="upload" class="form-control">
+              </div>
+              
+              <div class="text-center">
+                <input type="submit" name="btn" value="Submit" class="btn btn-primary px-4">
+              </div>
+            </form>  
+          </div>
+        </div>
+      </div>
+      
+      <!-- Second Column -->
+      <div class="col-lg-6">
+        <div class="card card-success">
+          <div class="card-header">
+            <h3 class="card-title">Forms Height</h3>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Control">
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg" placeholder="Height lg">
+            </div>
+            
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Different input message">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <!-- Third Column -->
+      <div class="col-lg-6">
+        <div class="card card-info">
+          <div class="card-header">
+            <h3 class="card-title">Horizontal Form</h3>
+          </div>
+          <div class="card-body">
+            <form method="post">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email2" class="form-control" placeholder="Email">
+              </div>
+              
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="pass" class="form-control" placeholder="Password">
+              </div>
+              
+              <div class="form-group text-center">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="remember">
+                  <label class="form-check-label" for="remember">Do not forget me</label>
+                </div>
+              </div>
+              
+              <div class="d-flex justify-content-between">
+                <input type="submit" name="btn" value="Sign in" class="btn btn-info">
+                <button type="button" class="btn btn-secondary">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Fourth Column -->
+      <div class="col-lg-6">
+        <div class="card card-warning">
+          <div class="card-header">
+            <h3 class="card-title">General Form</h3>
+          </div>
+          <div class="card-body">
+            <form method="post">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Text</label>
+                    <input type="text" name="text1" class="form-control" placeholder="Enter...">    
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Disable Text</label>
+                    <input type="text" name="text2" class="form-control" placeholder="Enter..." disabled>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Text Area</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Text Area (Disabled)</label>
+                    <textarea class="form-control" rows="3" disabled></textarea>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+</body>
+</html>

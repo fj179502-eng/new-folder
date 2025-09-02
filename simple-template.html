@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Page</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  
+  <style>
+    /* Custom responsive styles */
+    .hero-section {
+      background-color: #000;
+      color: #fff;
+      padding: 2rem 0;
+    }
+    
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    @media (min-width: 768px) {
+      .hero-content {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    
+    .hero-text {
+      padding: 1rem;
+    }
+    
+    .hero-image {
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+    
+    .category-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    
+    @media (min-width: 576px) {
+      .category-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 992px) {
+      .category-section {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .category-item {
+      width: 100%;
+      border-radius: 10px;
+      padding: 1rem;
+    }
+    
+    .category-item img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .product-showcase {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .product-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    
+    @media (min-width: 768px) {
+      .product-item {
+        flex-direction: row;
+        text-align: left;
+      }
+      
+      .product-item.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+    
+    .product-item img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .product-item img {
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+      
+      .product-item.reverse img {
+        margin-right: 0;
+        margin-left: 2rem;
+      }
+    }
+    
+    .product-text {
+      flex: 1;
+    }
+    
+    .about-section {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0;
+    }
+    
+    @media (min-width: 768px) {
+      .about-section {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    
+    .about-text {
+      flex: 1;
+      padding: 1rem;
+    }
+    
+    .about-image {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+    }
+    
+    .about-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+    
+    .new-product {
+      color: #d87d4a;
+      font-weight: 400;
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    
+    .btn-primary {
+      background-color: #d87d4a;
+      border-color: #d87d4a;
+      margin-top: 1rem;
+    }
+    
+    .btn-primary:hover {
+      background-color: #b36a3f;
+      border-color: #b36a3f;
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+
+  <header style="background-color: black; color: white;">
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-3">
+          <h2 style="font-weight: bold; font-size: 1.5rem; margin: 0; padding: 1rem;">Logo</h2>
+        </div>
+        <div class="col-md-9">
+          <nav class="navbar navbar-expand-md justify-content-end">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" style="border: 1px solid white; color: white;">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a href="#home" class="nav-link" style="color: #fff;">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#mobilephone" class="nav-link" style="color: #fff;">Mobilephone</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#watch" class="nav-link" style="color: #fff;">Watch</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#speaker" class="nav-link" style="color: #fff;">Speaker</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="hero-section">
+    <div class="container-fluid">
+      <div class="hero-content">
+        <div class="hero-text col-md-6">
+          <p class="new-product">NEW PRODUCT</p>
+          <h1 style="font-size: 2rem; margin: 1rem 0;">XX99 MARK II HEADPHONES</h1>
+          <p class="desc">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
+          <a href="#" class="btn btn-primary">SEE PRODUCT</a>
+        </div>
+        <div class="hero-image col-md-6">
+          <img src="image/OIP3.jfif" alt="XX99 Headphones" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="category-section">
+      <div class="category-item">
+        <img src="image/OIP2.jfif" alt="Mobilephones" class="img-fluid">
+        <h3 style="margin: 0.5rem 0;">Mobilephones</h3>
+        <a href="#">SHOP <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="category-item">
+        <img src="image/OIP.jfif" alt="Watch" class="img-fluid">
+        <h3 style="margin: 0.5rem 0;">Watch</h3>
+        <a href="#">SHOP <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="category-item">
+        <img src="image/OIP4.jfif" alt="Speaker" class="img-fluid">
+        <h3 style="margin: 0.5rem 0;">Speaker</h3>
+        <a href="#">SHOP <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="product-showcase">
+      <div class="product-item" style="background: #d87d4a; color: #fff;">
+        <img src="image/OIP2.jfif" alt="AX12 Mobile Phone" class="img-fluid">
+        <div class="product-text">
+          <h2>AX12 Mobile Phone</h2>
+          <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+          <a href="#" class="btn btn-primary">SEE PRODUCT</a>
+        </div>
+      </div>
+      
+      <div class="product-item reverse" style="background: #f1f1f1;">
+        <img src="image/OIP.jfif" alt="Watch" class="img-fluid">
+        <div class="product-text">
+          <h2>Watch</h2>
+          <a href="#" class="btn btn-primary">SEE PRODUCT</a>
+        </div>
+      </div>
+      
+      <div class="product-item" style="background: #f1f1f1;">
+        <img src="image/OIP4.jfif" alt="ZX9 Speaker" class="img-fluid">
+        <div class="product-text">
+          <h2>ZX9 Speaker</h2>
+          <a href="#" class="btn btn-primary">SEE PRODUCT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section container">
+    <div class="about-text col-md-6">
+      <h2>BRINGING YOU THE <span style="color: #d87d4a;">BEST</span> AUDIO GEAR</h2>
+      <p>Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. Visit our store to browse and experience a wide range of our products.</p>
+    </div>
+    <div class="about-image col-md-6">
+      <img src="image/IMG-20240614-WA0003.jpg" alt="About us" class="img-fluid">
+    </div>
+  </section>
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+</body>
+</html>
